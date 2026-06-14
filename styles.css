@@ -202,6 +202,15 @@ h3{font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(1.3rem,2.6vw,
 .nav__links a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--accent-ink);border-radius:2px;transition:width .25s}
 .nav__links a:hover::after{width:100%}
 
+/* language toggle */
+.nav__right{display:flex;align-items:center;gap:.7rem}
+.langtoggle{display:inline-flex;align-items:center;gap:1px;background:var(--cream-2);border-radius:var(--r-pill);padding:3px;box-shadow:var(--sh-soft)}
+.langtoggle button{font-family:inherit;font-weight:800;font-size:.8rem;letter-spacing:.02em;color:var(--ink-3);
+  background:none;border:0;cursor:pointer;padding:.34em .62em;border-radius:var(--r-pill);
+  transition:color .2s,background .2s}
+.langtoggle button:hover{color:var(--ink)}
+.langtoggle button.is-active{color:var(--cream-2);background:var(--ink)}
+
 /* =========================================================
    HERO
    ========================================================= */
@@ -503,6 +512,8 @@ section.problem,section.how,section.mascots,section.pillars,section.privacy,sect
   body{padding-bottom:calc(70px + env(safe-area-inset-bottom))}
   .nav__links{display:none}
   .nav__word{font-size:1.3rem}
+  .nav__right .btn--sm{display:none}
+  .langtoggle button{padding:.32em .55em;font-size:.78rem}
   .nav{padding-top:calc(.85rem + env(safe-area-inset-top))}
   .nav.scrolled{padding-top:calc(.6rem + env(safe-area-inset-top))}
   .phone--front{left:0;width:248px}

@@ -6,18 +6,21 @@
 <title>sona: tire o seu sonho do papel</title>
 <meta name="description" content="conta o que você quer realizar e o sona transforma em um caminho possível, com passos pequenos pra dar no seu ritmo. com um companheiro do seu lado, todo dia. grátis pra começar." />
 <meta name="theme-color" content="#FFF8F0" />
+<link rel="canonical" href="https://sonadreams.com/" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
 <meta property="og:title" content="sona: tire o seu sonho do papel" />
 <meta property="og:description" content="seu companheiro de sonhos. um passo pequeno por dia, sem cobrança, sem culpa." />
-<meta property="og:url" content="https://josediogor.github.io/sona-site/" />
-<meta property="og:image" content="https://josediogor.github.io/sona-site/assets/og.png" />
+<meta property="og:url" content="https://sonadreams.com/" />
+<meta property="og:image" content="https://sonadreams.com/assets/og.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:locale" content="pt_BR" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="es_ES" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://josediogor.github.io/sona-site/assets/og.png" />
+<meta name="twitter:image" content="https://sonadreams.com/assets/og.png" />
 
 <link rel="icon" type="image/png" href="assets/icon.png" />
 <link rel="apple-touch-icon" href="assets/icon.png" />
@@ -30,26 +33,33 @@
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<a class="skip" href="#top">pular para o conteúdo</a>
+<a class="skip" href="#top" data-i18n="skip">pular para o conteúdo</a>
 
 <!-- grain + atmosphere overlays -->
 <div class="grain" aria-hidden="true"></div>
 
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
-  <a class="nav__brand" href="#top" aria-label="sona, início">
+  <a class="nav__brand" href="#top" aria-label="sona">
     <img src="assets/icon.png" alt="" class="nav__logo" width="34" height="34" />
     <span class="nav__word">sona</span>
   </a>
-  <nav class="nav__links" aria-label="navegação">
-    <a href="#como-funciona">como funciona</a>
-    <a href="#companheiros">companheiros</a>
-    <a href="#planos">planos</a>
+  <nav class="nav__links" aria-label="nav">
+    <a href="#como-funciona" data-i18n="nav.how">como funciona</a>
+    <a href="#companheiros" data-i18n="nav.companions">companheiros</a>
+    <a href="#planos" data-i18n="nav.plans">planos</a>
   </nav>
-  <a class="btn btn--sm" href="https://apps.apple.com/br/app/id6774424990" target="_blank" rel="noopener">
-    <svg class="apple" viewBox="0 0 16 18" aria-hidden="true"><path d="M13.27 13.9c-.24.55-.52 1.06-.85 1.53-.45.64-.81 1.08-1.09 1.33-.44.4-.9.61-1.4.62-.36 0-.79-.1-1.29-.31-.5-.2-.96-.31-1.38-.31-.44 0-.91.1-1.42.31-.51.21-.92.32-1.24.33-.48.02-.96-.2-1.43-.64-.31-.27-.69-.72-1.13-1.36-.48-.68-.87-1.46-1.18-2.36-.33-.97-.5-1.91-.5-2.82 0-1.04.23-1.94.68-2.69.35-.6.82-1.08 1.41-1.43.59-.35 1.22-.53 1.91-.54.39 0 .89.12 1.51.35.62.23 1.02.35 1.19.35.13 0 .57-.14 1.32-.41.71-.25 1.31-.36 1.8-.32 1.33.11 2.33.63 3 1.57-1.19.72-1.78 1.73-1.77 3.02.01 1.01.38 1.85 1.1 2.51.33.31.69.55 1.1.72-.09.26-.18.5-.28.74ZM10.6 1.04c0 .78-.28 1.5-.85 2.17-.69.79-1.52 1.25-2.42 1.18-.01-.09-.02-.19-.02-.3 0-.75.33-1.55.9-2.2.29-.33.65-.6 1.1-.82.44-.21.86-.33 1.26-.35.01.11.02.21.02.32Z"/></svg>
-    baixar
-  </a>
+  <div class="nav__right">
+    <div class="langtoggle" role="group" aria-label="idioma / language">
+      <button type="button" data-lang="pt" class="is-active" aria-pressed="true">PT</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+    </div>
+    <a class="btn btn--sm" href="https://apps.apple.com/app/id6774424990" target="_blank" rel="noopener">
+      <svg class="apple" viewBox="0 0 16 18" aria-hidden="true"><path d="M13.27 13.9c-.24.55-.52 1.06-.85 1.53-.45.64-.81 1.08-1.09 1.33-.44.4-.9.61-1.4.62-.36 0-.79-.1-1.29-.31-.5-.2-.96-.31-1.38-.31-.44 0-.91.1-1.42.31-.51.21-.92.32-1.24.33-.48.02-.96-.2-1.43-.64-.31-.27-.69-.72-1.13-1.36-.48-.68-.87-1.46-1.18-2.36-.33-.97-.5-1.91-.5-2.82 0-1.04.23-1.94.68-2.69.35-.6.82-1.08 1.41-1.43.59-.35 1.22-.53 1.91-.54.39 0 .89.12 1.51.35.62.23 1.02.35 1.19.35.13 0 .57-.14 1.32-.41.71-.25 1.31-.36 1.8-.32 1.33.11 2.33.63 3 1.57-1.19.72-1.78 1.73-1.77 3.02.01 1.01.38 1.85 1.1 2.51.33.31.69.55 1.1.72-.09.26-.18.5-.28.74ZM10.6 1.04c0 .78-.28 1.5-.85 2.17-.69.79-1.52 1.25-2.42 1.18-.01-.09-.02-.19-.02-.3 0-.75.33-1.55.9-2.2.29-.33.65-.6 1.1-.82.44-.21.86-.33 1.26-.35.01.11.02.21.02.32Z"/></svg>
+      <span data-i18n="nav.download">baixar</span>
+    </a>
+  </div>
 </header>
 
 <main id="top">
@@ -62,32 +72,32 @@
 
     <div class="hero__inner">
       <div class="hero__copy">
-        <p class="eyebrow reveal" data-d="0">✦ seu companheiro de sonhos</p>
-        <h1 class="hero__title reveal" data-d="1">
+        <p class="eyebrow reveal" data-d="0" data-i18n="hero.eyebrow">✦ seu companheiro de sonhos</p>
+        <h1 class="hero__title reveal" data-d="1" data-i18n="hero.h1">
           tire o seu sonho
           <span class="mark mark--peach">do papel</span>
         </h1>
-        <p class="hero__sub reveal" data-d="2">
+        <p class="hero__sub reveal" data-d="2" data-i18n="hero.sub">
           conta o que você quer realizar. a gente transforma num caminho
           possível, com passos pequenos pra dar no seu ritmo. e tem sempre
           alguém do seu lado, todo dia.
         </p>
         <div class="hero__cta reveal" data-d="3">
-          <a class="btn btn--lg" href="https://apps.apple.com/br/app/id6774424990" target="_blank" rel="noopener">
+          <a class="btn btn--lg" href="https://apps.apple.com/app/id6774424990" target="_blank" rel="noopener">
             <svg class="apple" viewBox="0 0 16 18" aria-hidden="true"><path d="M13.27 13.9c-.24.55-.52 1.06-.85 1.53-.45.64-.81 1.08-1.09 1.33-.44.4-.9.61-1.4.62-.36 0-.79-.1-1.29-.31-.5-.2-.96-.31-1.38-.31-.44 0-.91.1-1.42.31-.51.21-.92.32-1.24.33-.48.02-.96-.2-1.43-.64-.31-.27-.69-.72-1.13-1.36-.48-.68-.87-1.46-1.18-2.36-.33-.97-.5-1.91-.5-2.82 0-1.04.23-1.94.68-2.69.35-.6.82-1.08 1.41-1.43.59-.35 1.22-.53 1.91-.54.39 0 .89.12 1.51.35.62.23 1.02.35 1.19.35.13 0 .57-.14 1.32-.41.71-.25 1.31-.36 1.8-.32 1.33.11 2.33.63 3 1.57-1.19.72-1.78 1.73-1.77 3.02.01 1.01.38 1.85 1.1 2.51.33.31.69.55 1.1.72-.09.26-.18.5-.28.74ZM10.6 1.04c0 .78-.28 1.5-.85 2.17-.69.79-1.52 1.25-2.42 1.18-.01-.09-.02-.19-.02-.3 0-.75.33-1.55.9-2.2.29-.33.65-.6 1.1-.82.44-.21.86-.33 1.26-.35.01.11.02.21.02.32Z"/></svg>
-            começar meu primeiro sonho
+            <span data-i18n="hero.cta">começar meu primeiro sonho</span>
           </a>
-          <span class="btn-soon" title="em breve no android">
+          <span class="btn-soon" data-i18n-title="soon.title" title="em breve no android">
             <svg class="andro" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M4.8 12.2a7.2 7.2 0 0 1 14.4 0Z"/>
               <circle cx="9.2" cy="8.9" r=".95" fill="#FFFCF8"/><circle cx="14.8" cy="8.9" r=".95" fill="#FFFCF8"/>
               <path d="M7.6 5.1 6.3 3.1M16.4 5.1l1.3-2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" fill="none"/>
             </svg>
-            android <small>em breve</small>
+            android <small data-i18n="soon">em breve</small>
           </span>
-          <a class="btn-ghost" href="#como-funciona">ver como funciona</a>
+          <a class="btn-ghost" href="#como-funciona" data-i18n="hero.ghost">ver como funciona</a>
         </div>
-        <p class="hero__trust reveal" data-d="4">
+        <p class="hero__trust reveal" data-d="4" data-i18n="hero.trust">
           grátis pra começar · sem login, sem e-mail, sem cartão
         </p>
       </div>
@@ -108,40 +118,40 @@
 
   <!-- ============ TRUST STRIP ============ -->
   <section class="strip" aria-label="o que torna o sona diferente">
-    <div class="strip__item reveal"><span class="strip__ico" aria-hidden="true">🍂</span> sem cobrança, sem culpa</div>
+    <div class="strip__item reveal" data-i18n="strip.1"><span class="strip__ico" aria-hidden="true">🍂</span> sem cobrança, sem culpa</div>
     <div class="strip__sep" aria-hidden="true"></div>
-    <div class="strip__item reveal" data-d="1"><span class="strip__ico" aria-hidden="true">🌱</span> um passo de cada vez</div>
+    <div class="strip__item reveal" data-d="1" data-i18n="strip.2"><span class="strip__ico" aria-hidden="true">🌱</span> um passo de cada vez</div>
     <div class="strip__sep" aria-hidden="true"></div>
-    <div class="strip__item reveal" data-d="2"><span class="strip__ico" aria-hidden="true">🤍</span> alguém do seu lado</div>
+    <div class="strip__item reveal" data-d="2" data-i18n="strip.3"><span class="strip__ico" aria-hidden="true">🤍</span> alguém do seu lado</div>
     <div class="strip__sep" aria-hidden="true"></div>
-    <div class="strip__item reveal" data-d="3"><span class="strip__ico" aria-hidden="true">🔒</span> tudo fica no seu aparelho</div>
+    <div class="strip__item reveal" data-d="3" data-i18n="strip.4"><span class="strip__ico" aria-hidden="true">🔒</span> tudo fica no seu aparelho</div>
   </section>
 
-  <p class="wedge reveal">companhia <i>+</i> plano de sonho <i>+</i> cartas do futuro. <b>num app só</b>.</p>
+  <p class="wedge reveal" data-i18n="wedge">companhia <i>+</i> plano de sonho <i>+</i> cartas do futuro. <b>num app só</b>.</p>
 
   <!-- ============ PROBLEM ============ -->
   <section class="problem" id="sonho">
     <div class="blob blob--lilac blob--soft" aria-hidden="true"></div>
     <div class="problem__inner">
-      <p class="eyebrow reveal">a gente entende</p>
-      <h2 class="reveal" data-d="1">tem um sonho que <span class="mark mark--lilac">vive na sua cabeça</span>, mas nunca sai do lugar?</h2>
-      <p class="lead reveal" data-d="2">
+      <p class="eyebrow reveal" data-i18n="prob.eyebrow">a gente entende</p>
+      <h2 class="reveal" data-d="1" data-i18n="prob.h2">tem um sonho que <span class="mark mark--lilac">vive na sua cabeça</span>, mas nunca sai do lugar?</h2>
+      <p class="lead reveal" data-d="2" data-i18n="prob.body">
         não é preguiça. é que ninguém nunca te mostrou um primeiro passo
         pequeno o suficiente pra dar hoje. a pressão, a culpa, o
         tudo-ou-nada travam a gente.
       </p>
-      <p class="lead lead--accent reveal" data-d="3">o sona quebra o sonho em passos do tamanho de um dia. um de cada vez, no seu ritmo.</p>
+      <p class="lead lead--accent reveal" data-d="3" data-i18n="prob.accent">o sona quebra o sonho em passos do tamanho de um dia. um de cada vez, no seu ritmo.</p>
 
       <ul class="chips reveal" data-d="3" aria-label="tipos de sonho">
-        <li>💼 carreira</li>
-        <li>✈️ viajar / morar</li>
-        <li>💪 saúde</li>
-        <li>💰 dinheiro</li>
-        <li>🎓 estudar</li>
-        <li>📚 aprender</li>
-        <li>💗 relação</li>
-        <li>🏠 casa</li>
-        <li>✨ criar algo</li>
+        <li data-i18n="chip.career">💼 carreira</li>
+        <li data-i18n="chip.travel">✈️ viajar / morar</li>
+        <li data-i18n="chip.health">💪 saúde</li>
+        <li data-i18n="chip.money">💰 dinheiro</li>
+        <li data-i18n="chip.study">🎓 estudar</li>
+        <li data-i18n="chip.learn">📚 aprender</li>
+        <li data-i18n="chip.relationship">💗 relação</li>
+        <li data-i18n="chip.home">🏠 casa</li>
+        <li data-i18n="chip.create">✨ criar algo</li>
       </ul>
     </div>
   </section>
@@ -149,18 +159,18 @@
   <!-- ============ HOW IT WORKS ============ -->
   <section class="how" id="como-funciona">
     <div class="how__head">
-      <p class="eyebrow reveal">como funciona</p>
-      <h2 class="reveal" data-d="1">do sonho gigante <br>ao <span class="mark mark--peach">próximo passo</span></h2>
-      <p class="lead reveal" data-d="2">quatro telas, um caminho. nada de meta assustadora, só o que dá pra fazer hoje.</p>
+      <p class="eyebrow reveal" data-i18n="how.eyebrow">como funciona</p>
+      <h2 class="reveal" data-d="1" data-i18n="how.h2">do sonho gigante <br>ao <span class="mark mark--peach">próximo passo</span></h2>
+      <p class="lead reveal" data-d="2" data-i18n="how.lead">quatro telas, um caminho. nada de meta assustadora, só o que dá pra fazer hoje.</p>
     </div>
 
     <!-- step 1 -->
     <article class="step reveal">
       <div class="step__text">
         <span class="step__num">01</span>
-        <h3>conta o que você quer</h3>
-        <p>você escolhe um sonho e responde umas perguntinhas. de carreira a uma viagem, de juntar dinheiro a aprender algo novo. cabe tudo.</p>
-        <p class="note">a lumi conduz a conversa, no seu tempo.</p>
+        <h3 data-i18n="step1.title">conta o que você quer</h3>
+        <p data-i18n="step1.body">você escolhe um sonho e responde umas perguntinhas. de carreira a uma viagem, de juntar dinheiro a aprender algo novo. cabe tudo.</p>
+        <p class="note" data-i18n="step1.note">a lumi conduz a conversa, no seu tempo.</p>
       </div>
       <div class="step__art">
         <div class="phone" data-parallax="0.05">
@@ -174,9 +184,9 @@
     <article class="step step--rev reveal">
       <div class="step__text">
         <span class="step__num">02</span>
-        <h3>vira um caminho possível</h3>
-        <p>o sonho grande se divide em fases e passos pequenos, do tamanho do seu dia. você sempre sabe qual é o próximo, e o quanto já andou.</p>
-        <p class="note">progresso que você vê, sem planilha.</p>
+        <h3 data-i18n="step2.title">vira um caminho possível</h3>
+        <p data-i18n="step2.body">o sonho grande se divide em fases e passos pequenos, do tamanho do seu dia. você sempre sabe qual é o próximo, e o quanto já andou.</p>
+        <p class="note" data-i18n="step2.note">progresso que você vê, sem planilha.</p>
       </div>
       <div class="step__art">
         <div class="phone" data-parallax="0.05">
@@ -190,9 +200,9 @@
     <article class="step reveal">
       <div class="step__text">
         <span class="step__num">03</span>
-        <h3>uma ação por dia já muda tudo</h3>
-        <p>cinco, dez minutos. todo dia o sona te entrega uma ação pequena pra te aproximar um pouquinho. cada passo vira uma <b>semente</b>, e a sua árvore cresce junto.</p>
-        <p class="note">🔥 sequência · 🌱 sementes guardadas</p>
+        <h3 data-i18n="step3.title">uma ação por dia já muda tudo</h3>
+        <p data-i18n="step3.body">cinco, dez minutos. todo dia o sona te entrega uma ação pequena pra te aproximar um pouquinho. cada passo vira uma <b>semente</b>, e a sua árvore cresce junto.</p>
+        <p class="note" data-i18n="step3.note">🔥 sequência · 🌱 sementes guardadas</p>
       </div>
       <div class="step__art">
         <div class="phone" data-parallax="0.05">
@@ -206,9 +216,9 @@
     <article class="step step--rev reveal">
       <div class="step__text">
         <span class="step__num">04</span>
-        <h3>até a pausa conta</h3>
-        <p>uma lista de tarefas cobra. o sona caminha com você. no fim do dia você diz: <b>avancei</b>, <b>só pensei</b> ou <b>pausa</b>. dia lento também conta. aqui ninguém te julga.</p>
-        <p class="note">um toque, sem peso. sem fila vermelha de atrasados.</p>
+        <h3 data-i18n="step4.title">até a pausa conta</h3>
+        <p data-i18n="step4.body">uma lista de tarefas cobra. o sona caminha com você. no fim do dia você diz: <b>avancei</b>, <b>só pensei</b> ou <b>pausa</b>. dia lento também conta. aqui ninguém te julga.</p>
+        <p class="note" data-i18n="step4.note">um toque, sem peso. sem fila vermelha de atrasados.</p>
       </div>
       <div class="step__art">
         <div class="phone" data-parallax="0.05">
@@ -223,47 +233,47 @@
   <section class="tree" id="arvore">
     <div class="blob blob--green-soft" aria-hidden="true"></div>
     <div class="tree__head">
-      <p class="eyebrow reveal">a recompensa de continuar</p>
-      <h2 class="reveal" data-d="1">cada passo do seu sonho <span class="mark mark--green">vira uma semente</span></h2>
-      <p class="lead reveal" data-d="2">e suas sementes fazem uma árvore crescer. ela cresce com o que você faz na vida real, não com tempo de tela. e cresce mesmo nos dias mais devagar.</p>
+      <p class="eyebrow reveal" data-i18n="tree.eyebrow">a recompensa de continuar</p>
+      <h2 class="reveal" data-d="1" data-i18n="tree.h2">cada passo do seu sonho <span class="mark mark--green">vira uma semente</span></h2>
+      <p class="lead reveal" data-d="2" data-i18n="tree.lead">e suas sementes fazem uma árvore crescer. ela cresce com o que você faz na vida real, não com tempo de tela. e cresce mesmo nos dias mais devagar.</p>
     </div>
     <ul class="tree__stages reveal" data-d="2" role="img" aria-label="uma semente que cresce em seis estágios até uma árvore cheia de frutos">
-      <li><img src="assets/trees/tree_1_seed.png" alt="" width="180" height="180" loading="lazy" /><span>semente</span></li>
-      <li><img src="assets/trees/tree_2_sprout.png" alt="" width="180" height="180" loading="lazy" /><span>broto</span></li>
-      <li><img src="assets/trees/tree_3_sapling.png" alt="" width="180" height="180" loading="lazy" /><span>muda</span></li>
-      <li><img src="assets/trees/tree_4_young.png" alt="" width="180" height="180" loading="lazy" /><span>jovem</span></li>
-      <li><img src="assets/trees/tree_5_blooming.png" alt="" width="180" height="180" loading="lazy" /><span>florindo</span></li>
-      <li><img src="assets/trees/tree_6_fruiting.png" alt="" width="180" height="180" loading="lazy" /><span>frutos</span></li>
+      <li><img src="assets/trees/tree_1_seed.png" alt="" width="180" height="180" loading="lazy" /><span data-i18n="tree.s1">semente</span></li>
+      <li><img src="assets/trees/tree_2_sprout.png" alt="" width="180" height="180" loading="lazy" /><span data-i18n="tree.s2">broto</span></li>
+      <li><img src="assets/trees/tree_3_sapling.png" alt="" width="180" height="180" loading="lazy" /><span data-i18n="tree.s3">muda</span></li>
+      <li><img src="assets/trees/tree_4_young.png" alt="" width="180" height="180" loading="lazy" /><span data-i18n="tree.s4">jovem</span></li>
+      <li><img src="assets/trees/tree_5_blooming.png" alt="" width="180" height="180" loading="lazy" /><span data-i18n="tree.s5">florindo</span></li>
+      <li><img src="assets/trees/tree_6_fruiting.png" alt="" width="180" height="180" loading="lazy" /><span data-i18n="tree.s6">frutos</span></li>
     </ul>
-    <p class="tree__counter reveal" data-d="3"><span>🔥 sequência de 3 dias</span><i></i><span>🌱 36 sementes</span><i></i><span>sua árvore: <b>jovem</b></span></p>
+    <p class="tree__counter reveal" data-d="3" data-i18n="tree.counter"><span>🔥 sequência de 3 dias</span><i></i><span>🌱 36 sementes</span><i></i><span>sua árvore: <b>jovem</b></span></p>
   </section>
 
   <!-- ============ MASCOTS ============ -->
   <section class="mascots" id="companheiros">
     <div class="blob blob--peach blob--soft" aria-hidden="true"></div>
     <div class="mascots__head">
-      <p class="eyebrow reveal">você não caminha sozinho</p>
-      <h2 class="reveal" data-d="1">escolha quem caminha <span class="mark mark--green">com você</span></h2>
-      <p class="lead reveal" data-d="2">três companheiros, três jeitos de cuidar. você escolhe o seu desde o começo.</p>
+      <p class="eyebrow reveal" data-i18n="mascots.eyebrow">você não caminha sozinho</p>
+      <h2 class="reveal" data-d="1" data-i18n="mascots.h2">escolha quem caminha <span class="mark mark--green">com você</span></h2>
+      <p class="lead reveal" data-d="2" data-i18n="mascots.lead">três companheiros, três jeitos de cuidar. você escolhe o seu desde o começo.</p>
     </div>
     <div class="mascots__grid">
       <article class="char char--lumi reveal">
-        <div class="char__art"><img src="assets/mascots/lumi.png" alt="lumi, a companheira sonhadora, abraçando uma estrela" width="260" height="211" loading="lazy" /></div>
+        <div class="char__art"><img src="assets/mascots/lumi.png" alt="lumi" width="260" height="211" loading="lazy" /></div>
         <h3>lumi</h3>
-        <p class="char__role">a sonhadora</p>
-        <p>celebra cada conquista com você e te lembra de onde você quer chegar.</p>
+        <p class="char__role" data-i18n="char.lumi.role">a sonhadora</p>
+        <p data-i18n="char.lumi.desc">celebra cada conquista com você e te lembra de onde você quer chegar.</p>
       </article>
       <article class="char char--tico reveal" data-d="1">
-        <div class="char__art"><img src="assets/mascots/tico.png" alt="tico, o companheiro planejador, com um caderno" width="260" height="208" loading="lazy" /></div>
+        <div class="char__art"><img src="assets/mascots/tico.png" alt="tico" width="260" height="208" loading="lazy" /></div>
         <h3>tico</h3>
-        <p class="char__role">o planejador</p>
-        <p>organiza os passos e te ajuda a lembrar, com calma e sem pressa.</p>
+        <p class="char__role" data-i18n="char.tico.role">o planejador</p>
+        <p data-i18n="char.tico.desc">organiza os passos e te ajuda a lembrar, com calma e sem pressa.</p>
       </article>
       <article class="char char--bertha reveal" data-d="2">
-        <div class="char__art"><img src="assets/mascots/bertha.png" alt="bertha, a companheira acolhedora, segurando uma carta" width="260" height="260" loading="lazy" /></div>
+        <div class="char__art"><img src="assets/mascots/bertha.png" alt="bertha" width="260" height="260" loading="lazy" /></div>
         <h3>bertha</h3>
-        <p class="char__role">a acolhedora</p>
-        <p>está ali nos dias difíceis, com um respiro guiado e zero julgamento.</p>
+        <p class="char__role" data-i18n="char.bertha.role">a acolhedora</p>
+        <p data-i18n="char.bertha.desc">está ali nos dias difíceis, com um respiro guiado e zero julgamento.</p>
       </article>
     </div>
   </section>
@@ -272,36 +282,36 @@
   <section class="night">
     <div class="night__stars" aria-hidden="true"></div>
     <div class="night__inner">
-      <p class="eyebrow eyebrow--light reveal">cartas do futuro</p>
-      <h2 class="night__quote reveal" data-d="1">
+      <p class="eyebrow eyebrow--light reveal" data-i18n="night.eyebrow">cartas do futuro</p>
+      <h2 class="night__quote reveal" data-d="1" data-i18n="night.quote">
         de vez em quando, uma carta que você escreveu pro seu eu do futuro
         <span class="nowrap"><span class="mark mark--gold">chega de volta</span>.</span>
       </h2>
-      <p class="night__sub reveal" data-d="2">e você percebe, de um jeito que nenhum gráfico mostra, o quanto já caminhou.</p>
+      <p class="night__sub reveal" data-d="2" data-i18n="night.sub">e você percebe, de um jeito que nenhum gráfico mostra, o quanto já caminhou.</p>
     </div>
   </section>
 
   <!-- ============ DIFFERENT / PILLARS ============ -->
   <section class="pillars" id="diferente">
     <div class="pillars__head">
-      <p class="eyebrow reveal">não é mais um app de tarefas</p>
-      <h2 class="reveal" data-d="1">o que faz o sona <span class="mark mark--lilac">diferente</span></h2>
+      <p class="eyebrow reveal" data-i18n="pillars.eyebrow">não é mais um app de tarefas</p>
+      <h2 class="reveal" data-d="1" data-i18n="pillars.h2">o que faz o sona <span class="mark mark--lilac">diferente</span></h2>
     </div>
     <div class="pillars__grid">
       <article class="pillar reveal">
         <div class="pillar__ico">💌</div>
-        <h3>cartas do futuro</h3>
-        <p>escreva pro seu eu de daqui a um tempo. um dia, sem avisar, a carta volta pra te lembrar o quanto você já andou.</p>
+        <h3 data-i18n="pillar1.title">cartas do futuro</h3>
+        <p data-i18n="pillar1.body">escreva pro seu eu de daqui a um tempo. um dia, sem avisar, a carta volta pra te lembrar o quanto você já andou.</p>
       </article>
       <article class="pillar reveal" data-d="1">
         <div class="pillar__ico">🌳</div>
-        <h3>um caminho com alma</h3>
-        <p>um plano pra valer, mas com um tom que acolhe. progresso que dá pra sentir, sem cobrança.</p>
+        <h3 data-i18n="pillar2.title">um caminho com alma</h3>
+        <p data-i18n="pillar2.body">um plano pra valer, mas com um tom que acolhe. progresso que dá pra sentir, sem cobrança.</p>
       </article>
       <article class="pillar reveal" data-d="2">
         <div class="pillar__ico">🫧</div>
-        <h3>companhia que cuida</h3>
-        <p>três companheiros com jeitos diferentes e um respiro guiado pros dias mais pesados.</p>
+        <h3 data-i18n="pillar3.title">companhia que cuida</h3>
+        <p data-i18n="pillar3.body">três companheiros com jeitos diferentes e um respiro guiado pros dias mais pesados.</p>
       </article>
     </div>
   </section>
@@ -316,13 +326,13 @@
         </div>
       </div>
       <div class="proof__copy">
-        <p class="eyebrow reveal">inspiração diária</p>
-        <h2 class="reveal" data-d="1">um empurrãozinho <span class="mark mark--peach">todo dia</span></h2>
-        <blockquote class="proof__quote reveal" data-d="2">
+        <p class="eyebrow reveal" data-i18n="proof.eyebrow">inspiração diária</p>
+        <h2 class="reveal" data-d="1" data-i18n="proof.h2">um empurrãozinho <span class="mark mark--peach">todo dia</span></h2>
+        <blockquote class="proof__quote reveal" data-d="2" data-i18n="proof.quote">
           a clareza é o primeiro passo pra conquista. quando você sabe o que quer, o resto fica mais fácil.
           <cite>frase do dia, dentro do sona</cite>
         </blockquote>
-        <p class="proof__note reveal" data-d="3">o sona é novinho. as primeiras árvores estão começando a crescer agora. a sua pode ser uma delas. 🌱</p>
+        <p class="proof__note reveal" data-d="3" data-i18n="proof.note">o sona é novinho. as primeiras árvores estão começando a crescer agora. a sua pode ser uma delas. 🌱</p>
       </div>
     </div>
   </section>
@@ -331,9 +341,9 @@
   <section class="privacy">
     <div class="privacy__inner reveal">
       <div class="privacy__seal" aria-hidden="true">🔒</div>
-      <p class="eyebrow">seus sonhos são seus</p>
-      <h2>ficam <span class="mark mark--green">só com você</span></h2>
-      <p class="lead">sem login. sem e-mail. sem rastreio. tudo que você escreve fica guardado no seu aparelho, do seu jeito, longe de todo mundo.</p>
+      <p class="eyebrow" data-i18n="privacy.eyebrow">seus sonhos são seus</p>
+      <h2 data-i18n="privacy.h2">ficam <span class="mark mark--green">só com você</span></h2>
+      <p class="lead" data-i18n="privacy.lead">sem login. sem e-mail. sem rastreio. tudo que você escreve fica guardado no seu aparelho, do seu jeito, longe de todo mundo.</p>
     </div>
   </section>
 
@@ -341,65 +351,65 @@
   <section class="pricing" id="planos">
     <div class="blob blob--lilac blob--soft" aria-hidden="true"></div>
     <div class="pricing__head">
-      <p class="eyebrow reveal">comece de graça</p>
-      <h2 class="reveal" data-d="1">grátis pra começar <span class="mark mark--peach">de verdade</span></h2>
-      <p class="lead reveal" data-d="2">um sonho inteiro, sem pagar nada. o pro é pra quando você quiser ir além.</p>
+      <p class="eyebrow reveal" data-i18n="pricing.eyebrow">comece de graça</p>
+      <h2 class="reveal" data-d="1" data-i18n="pricing.h2">grátis pra começar <span class="mark mark--peach">de verdade</span></h2>
+      <p class="lead reveal" data-d="2" data-i18n="pricing.lead">um sonho inteiro, sem pagar nada. o pro é pra quando você quiser ir além.</p>
     </div>
     <div class="pricing__grid">
       <article class="plan reveal">
-        <h3>sona grátis</h3>
+        <h3 data-i18n="free.name">sona grátis</h3>
         <p class="plan__price"><span>R$0</span></p>
-        <p class="plan__tag">um sonho, com tudo que precisa pra começar.</p>
+        <p class="plan__tag" data-i18n="free.tag">um sonho, com tudo que precisa pra começar.</p>
         <ul class="plan__list">
-          <li>um sonho completo, do início ao fim</li>
-          <li>um companheiro pra caminhar com você</li>
-          <li>ação pequena todo dia</li>
-          <li>sua árvore crescendo a cada passo</li>
-          <li>cartas pro seu eu do futuro</li>
-          <li>tudo guardado no seu aparelho</li>
+          <li data-i18n="free.li1">um sonho completo, do início ao fim</li>
+          <li data-i18n="free.li2">um companheiro pra caminhar com você</li>
+          <li data-i18n="free.li3">ação pequena todo dia</li>
+          <li data-i18n="free.li4">sua árvore crescendo a cada passo</li>
+          <li data-i18n="free.li5">cartas pro seu eu do futuro</li>
+          <li data-i18n="free.li6">tudo guardado no seu aparelho</li>
         </ul>
-        <a class="btn btn--soft btn--block" href="https://apps.apple.com/br/app/id6774424990" target="_blank" rel="noopener">começar grátis</a>
+        <a class="btn btn--soft btn--block" href="https://apps.apple.com/app/id6774424990" target="_blank" rel="noopener" data-i18n="free.cta">começar grátis</a>
       </article>
 
       <article class="plan plan--pro reveal" data-d="1">
-        <span class="plan__badge">⭐ mais querido</span>
+        <span class="plan__badge" data-i18n="pro.badge">⭐ mais querido</span>
         <h3>sona pro</h3>
-        <p class="plan__price"><span>R$59,90</span><small>/ano · menos de R$5 por mês</small></p>
-        <p class="plan__alt">ou R$9,90/mês · R$149 pra sempre</p>
-        <p class="plan__tag">pros seus sonhos sem limite.</p>
+        <p class="plan__price" data-i18n="pro.price"><span>R$59,90</span><small>/ano · menos de R$5 por mês</small></p>
+        <p class="plan__alt" data-i18n="pro.alt">ou R$9,90/mês · R$149 pra sempre</p>
+        <p class="plan__tag" data-i18n="pro.tag">pros seus sonhos sem limite.</p>
         <ul class="plan__list">
-          <li>sonhos <b>ilimitados</b></li>
-          <li>os três companheiros: lumi, tico e bertha</li>
-          <li>cartas em áudio</li>
-          <li>check-in semanal com replanejamento</li>
-          <li>mural de evidências + antes vs agora</li>
+          <li data-i18n="pro.li1">sonhos <b>ilimitados</b></li>
+          <li data-i18n="pro.li2">os três companheiros: lumi, tico e bertha</li>
+          <li data-i18n="pro.li3">cartas em áudio</li>
+          <li data-i18n="pro.li4">check-in semanal com replanejamento</li>
+          <li data-i18n="pro.li5">mural de evidências + antes vs agora</li>
         </ul>
-        <a class="btn btn--lg btn--block" href="https://apps.apple.com/br/app/id6774424990" target="_blank" rel="noopener">
+        <a class="btn btn--lg btn--block" href="https://apps.apple.com/app/id6774424990" target="_blank" rel="noopener">
           <svg class="apple" viewBox="0 0 16 18" aria-hidden="true"><path d="M13.27 13.9c-.24.55-.52 1.06-.85 1.53-.45.64-.81 1.08-1.09 1.33-.44.4-.9.61-1.4.62-.36 0-.79-.1-1.29-.31-.5-.2-.96-.31-1.38-.31-.44 0-.91.1-1.42.31-.51.21-.92.32-1.24.33-.48.02-.96-.2-1.43-.64-.31-.27-.69-.72-1.13-1.36-.48-.68-.87-1.46-1.18-2.36-.33-.97-.5-1.91-.5-2.82 0-1.04.23-1.94.68-2.69.35-.6.82-1.08 1.41-1.43.59-.35 1.22-.53 1.91-.54.39 0 .89.12 1.51.35.62.23 1.02.35 1.19.35.13 0 .57-.14 1.32-.41.71-.25 1.31-.36 1.8-.32 1.33.11 2.33.63 3 1.57-1.19.72-1.78 1.73-1.77 3.02.01 1.01.38 1.85 1.1 2.51.33.31.69.55 1.1.72-.09.26-.18.5-.28.74ZM10.6 1.04c0 .78-.28 1.5-.85 2.17-.69.79-1.52 1.25-2.42 1.18-.01-.09-.02-.19-.02-.3 0-.75.33-1.55.9-2.2.29-.33.65-.6 1.1-.82.44-.21.86-.33 1.26-.35.01.11.02.21.02.32Z"/></svg>
-          quero o sona pro
+          <span data-i18n="pro.cta">quero o sona pro</span>
         </a>
-        <p class="plan__fine">cancele quando quiser.</p>
+        <p class="plan__fine" data-i18n="pro.fine">cancele quando quiser.</p>
       </article>
     </div>
-    <p class="pricing__close reveal">o pro abre mais espaço. nunca tira o que era seu de graça.</p>
+    <p class="pricing__close reveal" data-i18n="pricing.close">o pro abre mais espaço. nunca tira o que era seu de graça.</p>
   </section>
 
   <!-- ============ FAQ ============ -->
   <section class="faq" id="duvidas">
     <div class="faq__head">
-      <p class="eyebrow reveal">ainda em dúvida?</p>
-      <h2 class="reveal" data-d="1">perguntas que <span class="mark mark--lilac">a gente ouve</span></h2>
+      <p class="eyebrow reveal" data-i18n="faq.eyebrow">ainda em dúvida?</p>
+      <h2 class="reveal" data-d="1" data-i18n="faq.h2">perguntas que <span class="mark mark--lilac">a gente ouve</span></h2>
     </div>
     <div class="faq__list">
-      <details class="reveal"><summary>é só mais um app de tarefas?</summary><p>não. o sona junta planejamento de verdade, um companheiro que te acompanha e cartas pro seu futuro. é menos checklist, mais caminhada.</p></details>
-      <details class="reveal" data-d="1"><summary>preciso pagar?</summary><p>não. dá pra cuidar de um sonho inteiro de graça, com tudo que precisa pra começar. o pro é só pra quem quer ir além.</p></details>
-      <details class="reveal" data-d="2"><summary>meus dados estão seguros?</summary><p>totalmente. seus sonhos ficam guardados só no seu aparelho. a gente não vê nem rastreia. sem login, sem e-mail.</p></details>
-      <details class="reveal" data-d="3"><summary>preciso criar conta?</summary><p>não. sem login, sem e-mail. você abre o app e já começa.</p></details>
-      <details class="reveal"><summary>e se eu trocar de celular?</summary><p>como tudo fica no seu aparelho, seus sonhos acompanham o backup do seu iphone (iCloud ou no computador) quando você muda de aparelho.</p></details>
-      <details class="reveal" data-d="1"><summary>funciona offline?</summary><p>funciona. o sona é seu, no seu celular, sem depender de internet.</p></details>
-      <details class="reveal" data-d="1"><summary>funciona pra qualquer sonho?</summary><p>carreira, viagem, saúde, dinheiro, estudos, relações, criar algo... se cabe num sonho, cabe aqui.</p></details>
-      <details class="reveal" data-d="2"><summary>e se eu falhar um dia?</summary><p>não existe falhar. dia de pausa também conta como caminho. o sona nunca vai te cobrar.</p></details>
-      <details class="reveal" data-d="3"><summary>em que aparelho funciona?</summary><p>iphone com iOS 17 ou mais recente. android tá nos planos.</p></details>
+      <details class="reveal"><summary data-i18n="faq.q1">é só mais um app de tarefas?</summary><p data-i18n="faq.a1">não. o sona junta planejamento de verdade, um companheiro que te acompanha e cartas pro seu futuro. é menos checklist, mais caminhada.</p></details>
+      <details class="reveal" data-d="1"><summary data-i18n="faq.q2">preciso pagar?</summary><p data-i18n="faq.a2">não. dá pra cuidar de um sonho inteiro de graça, com tudo que precisa pra começar. o pro é só pra quem quer ir além.</p></details>
+      <details class="reveal" data-d="2"><summary data-i18n="faq.q3">meus dados estão seguros?</summary><p data-i18n="faq.a3">totalmente. seus sonhos ficam guardados só no seu aparelho. a gente não vê nem rastreia. sem login, sem e-mail.</p></details>
+      <details class="reveal" data-d="3"><summary data-i18n="faq.q4">preciso criar conta?</summary><p data-i18n="faq.a4">não. sem login, sem e-mail. você abre o app e já começa.</p></details>
+      <details class="reveal"><summary data-i18n="faq.q5">e se eu trocar de celular?</summary><p data-i18n="faq.a5">como tudo fica no seu aparelho, seus sonhos acompanham o backup do seu iphone (iCloud ou no computador) quando você muda de aparelho.</p></details>
+      <details class="reveal" data-d="1"><summary data-i18n="faq.q6">funciona offline?</summary><p data-i18n="faq.a6">funciona. o sona é seu, no seu celular, sem depender de internet.</p></details>
+      <details class="reveal" data-d="1"><summary data-i18n="faq.q7">funciona pra qualquer sonho?</summary><p data-i18n="faq.a7">carreira, viagem, saúde, dinheiro, estudos, relações, criar algo... se cabe num sonho, cabe aqui.</p></details>
+      <details class="reveal" data-d="2"><summary data-i18n="faq.q8">e se eu falhar um dia?</summary><p data-i18n="faq.a8">não existe falhar. dia de pausa também conta como caminho. o sona nunca vai te cobrar.</p></details>
+      <details class="reveal" data-d="3"><summary data-i18n="faq.q9">em que aparelho funciona?</summary><p data-i18n="faq.a9">iphone com iOS 17 ou mais recente. android tá nos planos.</p></details>
     </div>
   </section>
 
@@ -414,35 +424,35 @@
         <img src="assets/mascots/lumi.png" alt="" width="150" height="122" class="float-slow" />
         <img src="assets/mascots/tico.png" alt="" width="120" height="96" class="float-slower" />
       </div>
-      <h2>quando você estiver pronto, <span class="mark mark--peach">a gente começa junto</span>.</h2>
-      <p class="lead">não precisa ter tudo resolvido. só o primeiro passo. qual sonho você quer tirar do papel?</p>
+      <h2 data-i18n="final.h2">quando você estiver pronto, <span class="mark mark--peach">a gente começa junto</span>.</h2>
+      <p class="lead" data-i18n="final.lead">não precisa ter tudo resolvido. só o primeiro passo. qual sonho você quer tirar do papel?</p>
       <div class="final__btns">
-        <a class="btn btn--lg btn--breathe" href="https://apps.apple.com/br/app/id6774424990" target="_blank" rel="noopener">
+        <a class="btn btn--lg btn--breathe" href="https://apps.apple.com/app/id6774424990" target="_blank" rel="noopener">
           <svg class="apple" viewBox="0 0 16 18" aria-hidden="true"><path d="M13.27 13.9c-.24.55-.52 1.06-.85 1.53-.45.64-.81 1.08-1.09 1.33-.44.4-.9.61-1.4.62-.36 0-.79-.1-1.29-.31-.5-.2-.96-.31-1.38-.31-.44 0-.91.1-1.42.31-.51.21-.92.32-1.24.33-.48.02-.96-.2-1.43-.64-.31-.27-.69-.72-1.13-1.36-.48-.68-.87-1.46-1.18-2.36-.33-.97-.5-1.91-.5-2.82 0-1.04.23-1.94.68-2.69.35-.6.82-1.08 1.41-1.43.59-.35 1.22-.53 1.91-.54.39 0 .89.12 1.51.35.62.23 1.02.35 1.19.35.13 0 .57-.14 1.32-.41.71-.25 1.31-.36 1.8-.32 1.33.11 2.33.63 3 1.57-1.19.72-1.78 1.73-1.77 3.02.01 1.01.38 1.85 1.1 2.51.33.31.69.55 1.1.72-.09.26-.18.5-.28.74ZM10.6 1.04c0 .78-.28 1.5-.85 2.17-.69.79-1.52 1.25-2.42 1.18-.01-.09-.02-.19-.02-.3 0-.75.33-1.55.9-2.2.29-.33.65-.6 1.1-.82.44-.21.86-.33 1.26-.35.01.11.02.21.02.32Z"/></svg>
-          começar meu primeiro sonho
+          <span data-i18n="final.cta">começar meu primeiro sonho</span>
         </a>
-        <span class="btn-soon" title="em breve no android">
+        <span class="btn-soon" data-i18n-title="soon.title" title="em breve no android">
           <svg class="andro" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4.8 12.2a7.2 7.2 0 0 1 14.4 0Z"/>
             <circle cx="9.2" cy="8.9" r=".95" fill="#FFFCF8"/><circle cx="14.8" cy="8.9" r=".95" fill="#FFFCF8"/>
             <path d="M7.6 5.1 6.3 3.1M16.4 5.1l1.3-2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" fill="none"/>
           </svg>
-          android <small>em breve</small>
+          android <small data-i18n="soon">em breve</small>
         </span>
       </div>
-      <p class="cta-note">grátis · sem login, sem e-mail, sem cartão</p>
-      <p class="final__sig">feito com carinho pela coco studio, são paulo 🌱</p>
+      <p class="cta-note" data-i18n="final.ctanote">grátis · sem login, sem e-mail, sem cartão</p>
+      <p class="final__sig" data-i18n="final.sig">feito com carinho pela coco studio, são paulo 🌱</p>
     </div>
   </section>
 
 </main>
 
 <!-- sticky mobile CTA -->
-<a class="mobilebar" id="mobilebar" href="https://apps.apple.com/br/app/id6774424990" target="_blank" rel="noopener">
-  <span class="mobilebar__txt">🌱 comece de graça</span>
+<a class="mobilebar" id="mobilebar" href="https://apps.apple.com/app/id6774424990" target="_blank" rel="noopener">
+  <span class="mobilebar__txt" data-i18n="mobilebar.txt">🌱 comece de graça</span>
   <span class="mobilebar__btn">
     <svg class="apple" viewBox="0 0 16 18" aria-hidden="true"><path d="M13.27 13.9c-.24.55-.52 1.06-.85 1.53-.45.64-.81 1.08-1.09 1.33-.44.4-.9.61-1.4.62-.36 0-.79-.1-1.29-.31-.5-.2-.96-.31-1.38-.31-.44 0-.91.1-1.42.31-.51.21-.92.32-1.24.33-.48.02-.96-.2-1.43-.64-.31-.27-.69-.72-1.13-1.36-.48-.68-.87-1.46-1.18-2.36-.33-.97-.5-1.91-.5-2.82 0-1.04.23-1.94.68-2.69.35-.6.82-1.08 1.41-1.43.59-.35 1.22-.53 1.91-.54.39 0 .89.12 1.51.35.62.23 1.02.35 1.19.35.13 0 .57-.14 1.32-.41.71-.25 1.31-.36 1.8-.32 1.33.11 2.33.63 3 1.57-1.19.72-1.78 1.73-1.77 3.02.01 1.01.38 1.85 1.1 2.51.33.31.69.55 1.1.72-.09.26-.18.5-.28.74ZM10.6 1.04c0 .78-.28 1.5-.85 2.17-.69.79-1.52 1.25-2.42 1.18-.01-.09-.02-.19-.02-.3 0-.75.33-1.55.9-2.2.29-.33.65-.6 1.1-.82.44-.21.86-.33 1.26-.35.01.11.02.21.02.32Z"/></svg>
-    baixar
+    <span data-i18n="nav.download">baixar</span>
   </span>
 </a>
 
@@ -452,18 +462,19 @@
     <img src="assets/icon.png" alt="" width="40" height="40" />
     <div>
       <strong>sona</strong>
-      <span>companheiro de sonhos</span>
+      <span data-i18n="foot.tagline">companheiro de sonhos</span>
     </div>
   </div>
-  <nav class="foot__links" aria-label="rodapé">
-    <a href="https://josediogor.github.io/sona-legal/privacy.html" target="_blank" rel="noopener">privacidade</a>
-    <a href="https://josediogor.github.io/sona-legal/terms.html" target="_blank" rel="noopener">termos</a>
-    <a href="https://josediogor.github.io/sona-legal/support.html" target="_blank" rel="noopener">suporte</a>
-    <a href="https://apps.apple.com/br/app/id6774424990" target="_blank" rel="noopener">app store</a>
+  <nav class="foot__links" aria-label="footer">
+    <a href="https://josediogor.github.io/sona-legal/privacy.html" target="_blank" rel="noopener" data-i18n="foot.privacy">privacidade</a>
+    <a href="https://josediogor.github.io/sona-legal/terms.html" target="_blank" rel="noopener" data-i18n="foot.terms">termos</a>
+    <a href="https://josediogor.github.io/sona-legal/support.html" target="_blank" rel="noopener" data-i18n="foot.support">suporte</a>
+    <a href="https://apps.apple.com/app/id6774424990" target="_blank" rel="noopener">app store</a>
   </nav>
-  <p class="foot__copy">© 2026 coco studio · são paulo, brasil</p>
+  <p class="foot__copy" data-i18n="foot.copy">© 2026 coco studio · são paulo, brasil</p>
 </footer>
 
+<script src="i18n.js" defer></script>
 <script src="main.js" defer></script>
 </body>
 </html>

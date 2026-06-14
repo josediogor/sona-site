@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://josediogor.github.io/sona-site/sitemap.xml
+Sitemap: https://sonadreams.com/sitemap.xml
