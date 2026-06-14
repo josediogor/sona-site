@@ -7,6 +7,39 @@
 <meta name="description" content="conta o que você quer realizar e o sona transforma em um caminho possível, com passos pequenos pra dar no seu ritmo. com um companheiro do seu lado, todo dia. grátis pra começar." />
 <meta name="theme-color" content="#FFF8F0" />
 <link rel="canonical" href="https://sonadreams.com/" />
+<meta name="apple-itunes-app" content="app-id=6774424990" />
+
+<!-- Google Analytics 4 · Coco Studio (Sona) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6F5FHSGNDQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6F5FHSGNDQ');
+
+  // funil Coco Studio: visita -> scroll -> clique na App Store
+  (function(){
+    var APP='sona';
+    document.addEventListener('click', function(e){
+      var a = e.target.closest ? e.target.closest('a[href*="apps.apple.com"]') : null;
+      if(!a) return;
+      var loc = a.getAttribute('data-goatcounter-click') || a.getAttribute('data-cta')
+              || (a.closest('section') && a.closest('section').id)
+              || (a.textContent||'').trim().slice(0,40) || 'sem-rotulo';
+      gtag('event','app_store_click',{app:APP, cta_location:loc, link_url:a.href});
+    }, true);
+    var marks=[25,50,75,90], hit={};
+    function onScroll(){
+      var d=document.documentElement, b=document.body||{};
+      var st=d.scrollTop||b.scrollTop||0;
+      var sh=(d.scrollHeight||b.scrollHeight||0)-d.clientHeight;
+      var p= sh>0 ? Math.round(st/sh*100) : 0;
+      for(var i=0;i<marks.length;i++){var m=marks[i]; if(p>=m && !hit[m]){hit[m]=1; gtag('event','scroll_depth',{app:APP, percent_scrolled:m});}}
+      if(hit[90]) window.removeEventListener('scroll', onScroll);
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+  })();
+</script>
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
@@ -31,6 +64,43 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,500..700&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=Caveat:wght@500;600;700&display=swap" /></noscript>
 
 <link rel="stylesheet" href="styles.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Sona: Sonhos e Metas",
+  "alternateName": "Sona",
+  "operatingSystem": "iOS",
+  "applicationCategory": "LifestyleApplication",
+  "inLanguage": "pt-BR",
+  "description": "Conta o que você quer realizar e o Sona transforma em um caminho possível, com passos pequenos no seu ritmo e um companheiro do seu lado, todo dia. Grátis pra começar.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" },
+  "author": { "@type": "Organization", "name": "Coco Studio", "url": "https://sonadreams.com/" },
+  "publisher": { "@type": "Organization", "name": "Coco Studio" },
+  "screenshot": "https://sonadreams.com/assets/screens/01_chat.jpg",
+  "downloadUrl": "https://apps.apple.com/app/id6774424990",
+  "url": "https://apps.apple.com/app/id6774424990"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "É só mais um app de tarefas?", "acceptedAnswer": { "@type": "Answer", "text": "Não. O Sona junta planejamento de verdade, um companheiro que te acompanha e cartas pro seu futuro. É menos checklist, mais caminhada." } },
+    { "@type": "Question", "name": "Preciso pagar?", "acceptedAnswer": { "@type": "Answer", "text": "Não. Dá pra cuidar de um sonho inteiro de graça, com tudo que precisa pra começar. O Pro é só pra quem quer ir além." } },
+    { "@type": "Question", "name": "Meus dados estão seguros?", "acceptedAnswer": { "@type": "Answer", "text": "Totalmente. Seus sonhos ficam guardados só no seu aparelho. A gente não vê nem rastreia. Sem login, sem e-mail." } },
+    { "@type": "Question", "name": "Preciso criar conta?", "acceptedAnswer": { "@type": "Answer", "text": "Não. Sem login, sem e-mail. Você abre o app e já começa." } },
+    { "@type": "Question", "name": "E se eu trocar de celular?", "acceptedAnswer": { "@type": "Answer", "text": "Como tudo fica no seu aparelho, seus sonhos acompanham o backup do seu iPhone (iCloud ou no computador) quando você muda de aparelho." } },
+    { "@type": "Question", "name": "Funciona offline?", "acceptedAnswer": { "@type": "Answer", "text": "Funciona. O Sona é seu, no seu celular, sem depender de internet." } },
+    { "@type": "Question", "name": "Funciona pra qualquer sonho?", "acceptedAnswer": { "@type": "Answer", "text": "Carreira, viagem, saúde, dinheiro, estudos, relações, criar algo... se cabe num sonho, cabe aqui." } },
+    { "@type": "Question", "name": "E se eu falhar um dia?", "acceptedAnswer": { "@type": "Answer", "text": "Não existe falhar. Dia de pausa também conta como caminho. O Sona nunca vai te cobrar." } },
+    { "@type": "Question", "name": "Em que aparelho funciona?", "acceptedAnswer": { "@type": "Answer", "text": "iPhone com iOS 17 ou mais recente. Android tá nos planos." } }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#top" data-i18n="skip">pular para o conteúdo</a>
